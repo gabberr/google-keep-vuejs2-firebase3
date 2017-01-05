@@ -1,6 +1,23 @@
-# keep
+# Google Keep clone
 
-> A Vue.js project
+Inspired by 
+https://scotch.io/tutorials/building-a-google-keep-clone-with-vue-and-firebase-pt-1
+
+All 3 parts of tutorial implemented and updated to use Vue.js version 2 and Firebase version 3
+
+## Firebase config
+
+Create /src/data/config.json file containing the Firebase app credentials
+
+```
+{
+   "apiKey": <API_KEY>,
+   "authDomain": <AUTH_DOMAIN>,
+   "databaseURL": <DATABASE_URL>,
+   "storageBucket": <STORAGE_BUCKE>,
+   "messagingSenderId": <SENDER_ID>
+ }
+```
 
 ## Build Setup
 
@@ -14,5 +31,3 @@ npm run dev
 # build for production with minification
 npm run build
 ```
-
-For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
