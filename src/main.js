@@ -11,13 +11,13 @@ Vue.use(VueRouter)
 
 let router = new VueRouter({
   routes: [
-    { name: 'notes', path: '/', component: NotesPage, alias: '/notes', auth: true },
+    { name: 'notes', path: '/', component: NotesPage, alias: '/notes', meta: { auth: true } },
     { name: 'auth', path: '/auth', component: AuthPage }
   ]
 })
 router.beforeEach((to, from, next) => {
-  if (to.auth && !Auth.getAuth()) {
-    next({path: '/auth'})
+  if (to.meta.auth && !Auth.getAuth()) {
+    next({name: 'auth'})
   } else {
     next()
   }
